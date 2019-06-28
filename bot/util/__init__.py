@@ -3,7 +3,7 @@ Several utility functions and classes.
 """
 
 from .config import *
-from .parser import *
 from .db import *
+from .parser import *
 
-__all__ = ['ConfigFile', 'SafeInputParser', 'CachedMysqlDatabase']
+__all__ = ['ConfigFile', 'ParserException', 'SafeInputParser', 'CachedMysqlDatabase']

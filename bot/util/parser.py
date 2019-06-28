@@ -9,11 +9,6 @@ import operator
 from util.safe_objects import *
 
 MAX_STR_LEN = 100
-ALLOWED_OBJECTS = {
-    'author': SafeMember,
-    'guild': SafeGuild,
-    'channel': SafeTextChannel
-}
 BIN_OPS = {
     ast.Add: operator.add,
     ast.Sub: operator.sub,
@@ -22,21 +17,26 @@ BIN_OPS = {
 }
 
 
-class UnsupportedNodeException(Exception):
+class ParserException(Exception):
     pass
 
 
-class ForbiddenObjectException(Exception):
+class UnsupportedNodeException(ParserException):
     pass
 
 
-class ForbiddenHandlingException(Exception):
+class ForbiddenObjectException(ParserException):
+    pass
+
+
+class ForbiddenHandlingException(ParserException):
     pass
 
 
 class SafeInputParser:
-    def __init__(self, string):
+    def __init__(self, string, whitelist):
         self.string = string
+        self.whitelist = whitelist
 
         if len(string) > MAX_STR_LEN:
             raise ValueError(f'String length cannot exceed {MAX_STR_LEN} characters.')
@@ -46,7 +46,7 @@ class SafeInputParser:
         try:
             self.parse()
             return True
-        except:
+        except Exception:
             return False
 
     def parse(self):
@@ -68,7 +68,7 @@ class SafeInputParser:
             elif not self.is_whitelisted(node.id):
                 raise ForbiddenObjectException(f'{node.id} is not whitelisted.')
 
-            return ALLOWED_OBJECTS.get(node.id)()
+            return self.whitelist.get(node.id)
         elif isinstance(node, ast.Attribute):
             if not isinstance(node.ctx, ast.Load):
                 raise ForbiddenHandlingException('Only loading variables is allowed.')

@@ -4,13 +4,19 @@ Intended to be used by the parser in order to restrict access to potentially sen
 """
 
 
-class SafeMember:
+class SafeObjectBase:
+    def __init_(self, **kwargs):
+        for k, v in kwargs.items():
+            setattr(self, k, v)
+
+
+class SafeMember(SafeObjectBase):
     pass
 
 
-class SafeGuild:
+class SafeGuild(SafeObjectBase):
     pass
 
 
-class SafeTextChannel:
+class SafeTextChannel(SafeObjectBase):
     pass

@@ -1,0 +1,4 @@
+{
+  "MESSAGE_CREATE": {"name": "member", "class": "SafeMember"},
+  "TYPING_START": {"name": "member", "class": "SafeMember"}
+}

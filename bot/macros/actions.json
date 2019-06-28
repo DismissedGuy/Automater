@@ -1,0 +1,13 @@
+{
+  "send_message": {
+    "method": "send_message",
+    "args": [
+      "channel_id",
+      "content"
+    ]
+  },
+  "delete_message": {
+    "name": "delete_message",
+    "method": "delete_message"
+  }
+}
