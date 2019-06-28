@@ -23,7 +23,7 @@ Conditions are statements that regulate and control when events are called. For 
 A simple term to describe... an action. For example, you might want the bot to change someone's nickname, or create a channel.
 
 #### Arguments
-Actions are great and all, but how would the bot know which channel to create? Or what should the name be? This is where arguments (or simply args) come into action. the action "channel_name" might describe the name of a new channel to create, for example.
+Actions are great and all, but how would the bot know which channel to create? Or what should the name be? This is where arguments (or simply args) come into action. the argument "channel_name" might describe the name of a new channel to create, for example.
 
 ## Screenshots
 Because human beings like por.. uh.. visual imagery.
