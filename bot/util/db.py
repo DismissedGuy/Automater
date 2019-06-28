@@ -23,7 +23,12 @@ class CachedMysqlDatabase:
             logging.info('Loading macros from database...')
 
             await cur.execute('SELECT * FROM macros;')
-            self._cache = await cur.fetchall()
+
+            cache = list(await cur.fetchall())
+            for m in cache:
+                # cast json string to py dict
+                m.__setitem__('args', json.loads(m['args']))
+            self._cache = cache
 
         return conn
 
