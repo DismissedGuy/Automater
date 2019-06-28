@@ -20,18 +20,20 @@
                         <li class="nav-item" role="presentation"></li>
                         <li class="nav-item" role="presentation"></li>
                         <li class="nav-item" role="presentation"></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">open your form, we said. stop having it be closed</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Create a new macro</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-    <h1 class="text-center">DismissedForm</h1>
+    <h1 class="text-center">Automater</h1>
     <div class="container" style="width: 60%;">
         <form method="post" target="_self">
             <div class="form-group"><label>Text Input 1</label><input class="form-control" type="text">
-                <div style="height: 10px;"></div><label>Text Input 2</label><input class="form-control" type="text">
-                <div style="height: 10px;"></div><label>Dropdown Select</label><select class="form-control"><optgroup label="This is a group"><option value="12" selected="">This is item 1</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select>
+                <div style="height: 10px;"></div><label>Choose an event...</label><select class="form-control"><optgroup label="Events"><option value="12" selected="">MESSAGE_CREATE</option><option value="13">TYPING_START</option><option value="14">PRESENCE_UPDATE</option></optgroup></select>
+                <div style="height: 10px;"></div><label>Type a condition statement...</label><input class="form-control" type="text">
+                <div style="height: 10px;"></div><label>Choose an action...</label><select class="form-control"><optgroup label="This is a group"><option value="12" selected="">send_message</option><option value="13">delete_message</option><option value="14">create_channel</option></optgroup></select>
+                <div style="height: 10px;"></div><label>Type your argument statements...</label><input class="form-control" type="text">
                 <div
                     style="height: 10px;"></div><label>Text Input 3</label><input class="form-control" type="text">
             <div style="margin: 19px;"></div><button class="btn btn-dark" type="submit">Submit</button></div>
