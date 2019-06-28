@@ -11,7 +11,7 @@ class InfoCommandsCog(commands.Cog):
 
     @commands.command()
     async def setup(self, ctx):
-        await ctx.send('<enter form URL here>')
+        await ctx.send(f'You can set up your server by adding new macros here: \n{self.bot.config["form_url"]}')
 
 
 def setup(bot):
