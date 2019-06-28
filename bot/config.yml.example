@@ -1,6 +1,8 @@
 ---
 prefix: '.'
 token: '1234token_here4321'
+form_url: 'http://localhost:80/'
+
 db:
   port: 3306
   user: 'root'
