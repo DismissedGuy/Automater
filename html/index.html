@@ -13,34 +13,32 @@
 <body>
     <div>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-            <div class="container"><a class="navbar-brand" href="#">DismissedStrap</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="#">Automater</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item" role="presentation"></li>
                         <li class="nav-item" role="presentation"></li>
                         <li class="nav-item" role="presentation"></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Create a new macro</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">More user-friendly version coming soon!</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-    <h1 class="text-center">Automater</h1>
+    <h1 class="text-center">New Macro</h1>
     <div class="container" style="width: 60%;">
-        <form method="post" target="_self">
-            <div class="form-group"><label>Text Input 1</label><input class="form-control" type="text">
+        <form id="form" action="http://localhost:4343/submit" method="post" target="_self">
                 <div style="height: 10px;"></div><label>Choose an event...</label><select class="form-control"><optgroup label="Events"><option value="12" selected="">MESSAGE_CREATE</option><option value="13">TYPING_START</option><option value="14">PRESENCE_UPDATE</option></optgroup></select>
                 <div style="height: 10px;"></div><label>Type a condition statement...</label><input class="form-control" type="text">
                 <div style="height: 10px;"></div><label>Choose an action...</label><select class="form-control"><optgroup label="This is a group"><option value="12" selected="">send_message</option><option value="13">delete_message</option><option value="14">create_channel</option></optgroup></select>
                 <div style="height: 10px;"></div><label>Type your argument statements...</label><input class="form-control" type="text">
-                <div
-                    style="height: 10px;"></div><label>Text Input 3</label><input class="form-control" type="text">
-            <div style="margin: 19px;"></div><button class="btn btn-dark" type="submit">Submit</button></div>
-    </form>
+            <div style="margin: 19px;"></div><button class="btn btn-dark" onclick="submitForm()">Submit</button></div>
+        </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/form.js"></script>
 </body>
 
 </html>
