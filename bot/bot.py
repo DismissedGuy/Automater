@@ -15,6 +15,10 @@ class AutomaterBot(commands.Bot):
 
         super().__init__(*args, **kwargs, command_prefix=prefix)
 
+        self.db = util.CachedMysqlDatabase(host='127.0.0.1', port=self.config['db']['port'],
+                                           user=self.config['db']['user'], password=self.config['db']['password'],
+                                           db=self.config['db']['db'], loop=self.loop)
+
         self.loop.run_until_complete(self.load_extensions())
 
     async def on_ready(self):
