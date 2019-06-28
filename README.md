@@ -27,3 +27,10 @@ Actions are great and all, but how would the bot know which channel to create? O
 
 ## Screenshots
 Because human beings like por.. uh.. visual imagery.
+
+#### New Macro Form
+![New Macro Form](https://github.com/DismissedGuy/Automater/raw/master/imgs/form.png)
+#### Beta Macro list
+![Beta Macro list](https://github.com/DismissedGuy/Automater/raw/master/imgs/macro_list_beta.png)
+#### Setup command
+![Setup command](https://github.com/DismissedGuy/Automater/raw/master/imgs/setup.png)
